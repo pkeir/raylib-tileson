@@ -260,7 +260,7 @@ extern "C" {
 #define AssertImageSame_2(image1, image2)
 #define AssertImageSame_3(image1, image2, message)
 #define AssertImageSame_4(image1, image2, message, p1)
-#define AssertImageSame_5(image1, image2, message, p1, p2,)
+#define AssertImageSame_5(image1, image2, message, p1, p2)
 #define AssertImageSame_6(image1, image2, message, p1, p2, p3)
 #define AssertImageSame_7(image1, image2, message, p1, p2, p3, p4)
 #else
