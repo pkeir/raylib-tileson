@@ -15,12 +15,6 @@ if (UNIX)
     endif()
 endif()
 
-# Copy the resources
-file(GLOB resources resources/*)
-set(test_resources)
-list(APPEND test_resources ${resources})
-file(COPY ${test_resources} DESTINATION "resources/")
-
 # Set up the test
 list(APPEND CMAKE_CTEST_ARGUMENTS "--output-on-failure")
 add_test(NAME raylib-tileson-test COMMAND raylib-tileson-test)

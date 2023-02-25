@@ -21,7 +21,7 @@ int main(int argc, char* argv[]) {
 
     SetTargetFPS(60);
 
-    Map map = LoadTiled("resources/desert.json");     // Load the map
+    Map map = LoadTiled("../../example/resources/desert.json");     // Load the map
     //--------------------------------------------------------------------------------------
 
     // Main game loop

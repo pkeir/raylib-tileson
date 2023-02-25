@@ -18,7 +18,7 @@ int main(int argc, char *argv[]) {
     Assert(ChangeDirectory(dir));
 
     {
-        Map map = LoadTiled("resources/desert.json");
+        Map map = LoadTiled("../../example/resources/desert.json");
 
         Assert(IsTiledReady(map));
         AssertEqual(map.width, 40);
@@ -32,7 +32,7 @@ int main(int argc, char *argv[]) {
 
     {
         unsigned int bytesRead;
-        unsigned char* data = LoadFileData("resources/desert.json", &bytesRead);
+        unsigned char* data = LoadFileData("../../resources/desert.json", &bytesRead);
         Map map = LoadTiledFromMemory(data, (int)bytesRead, "resources");
 
         Assert(IsTiledReady(map));

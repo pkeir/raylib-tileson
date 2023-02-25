@@ -16,8 +16,3 @@ if (UNIX)
     endif()
 endif()
 
-# Copy the resources
-file(GLOB resources resources/*)
-set(test_resources)
-list(APPEND test_resources ${resources})
-file(COPY ${test_resources} DESTINATION "resources/")
