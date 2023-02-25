@@ -1,6 +1,8 @@
 # raylib-tileson-test
 add_executable(raylib-tileson-test raylib-tileson-test.cpp)
+if (UNIX)
 target_compile_options(raylib-tileson-test PRIVATE -Wall -Wextra -Wconversion -Wsign-conversion)
+endif()
 target_link_libraries(raylib-tileson-test PUBLIC
     raylib
     raylib-tileson
