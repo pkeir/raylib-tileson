@@ -8,6 +8,8 @@ target_link_libraries(raylib-tileson-test PUBLIC
     raylib-tileson
 )
 
+target_compile_definitions(raylib-tileson-test PRIVATE -DTILESON_ROOT_DIR="${CMAKE_SOURCE_DIR}")
+
 if (UNIX)
     target_link_libraries(raylib-tileson-test PUBLIC m dl pthread)
 

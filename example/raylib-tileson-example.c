@@ -21,7 +21,8 @@ int main(int argc, char* argv[]) {
 
     SetTargetFPS(60);
 
-    Map map = LoadTiled("../../example/resources/desert.json");     // Load the map
+printf("%s\n", TILESON_ROOT_DIR);
+    Map map = LoadTiled(TILESON_ROOT_DIR "/example/resources/desert.json");     // Load the map
     //--------------------------------------------------------------------------------------
 
     // Main game loop
