@@ -6,6 +6,15 @@ target_link_libraries(raylib-tileson-test PUBLIC
     raylib-tileson
 )
 
+if (UNIX)
+    target_link_libraries(raylib-tileson-test PUBLIC m dl pthread)
+
+    if (CMAKE_BUILD_TYPE MATCHES Debug)
+        target_link_options(raylib-tileson-test PRIVATE -fsanitize=address)
+        target_link_options(raylib-tileson-test PRIVATE -fsanitize=undefined)
+    endif()
+endif()
+
 # Copy the resources
 file(GLOB resources resources/*)
 set(test_resources)

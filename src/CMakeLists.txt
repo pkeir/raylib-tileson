@@ -1,4 +1,4 @@
-find_package(raylib)
+find_package(raylib CONFIG REQUIRED)
 
 option(RAYLIB_TILESON "raylib-tileson" ON)
 option(RAYLIB_TILESON_SHARED "raylib-tileson-shared" OFF)
