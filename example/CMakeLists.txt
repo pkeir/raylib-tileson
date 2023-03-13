@@ -18,3 +18,6 @@ if (UNIX)
     endif()
 endif()
 
+# This fails at runtime on Linux with a debug build due to an allocation bug
+# spotted by ASan. To avoid the message, set the environment via:
+# export ASAN_OPTIONS=new_delete_type_mismatch=0
