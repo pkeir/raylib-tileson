@@ -33,3 +33,15 @@ if(BUILD_TESTING)
     )
     add_subdirectory(test)
 endif()
+
+# Install
+if(RAYLIB_TILESON)
+  install(TARGETS raylib-tileson DESTINATION lib)
+endif()
+
+if(RAYLIB_TILESON_SHARED)
+  install(TARGETS raylib-tileson-shared DESTINATION lib)
+endif()
+
+install(FILES include/raylib-tileson.h DESTINATION include)
+
