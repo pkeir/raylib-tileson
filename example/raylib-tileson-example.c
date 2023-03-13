@@ -1,4 +1,5 @@
 #include "raylib.h"
+#include <stdio.h>
 
 #define RAYLIB_TILESON_IMPLEMENTATION
 #include "raylib-tileson.h"
