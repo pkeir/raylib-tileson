@@ -12,10 +12,10 @@ target_compile_definitions(raylib-tileson-example PRIVATE -DTILESON_ROOT_DIR="${
 if (UNIX)
     target_link_libraries(raylib-tileson-example PUBLIC m dl pthread)
 
-    if (CMAKE_BUILD_TYPE MATCHES Debug)
+#    if (CMAKE_BUILD_TYPE MATCHES Debug) # Vcpkg Raylib: hungry for ASan/UBsan!
         target_link_options(raylib-tileson-example PRIVATE -fsanitize=address)
         target_link_options(raylib-tileson-example PRIVATE -fsanitize=undefined)
-    endif()
+#    endif()
 endif()
 
 # This fails at runtime on Linux with a debug build due to an allocation bug
